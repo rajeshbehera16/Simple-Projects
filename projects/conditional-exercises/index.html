@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditional Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .category {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .exercise {
+            margin-bottom: 15px;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Conditional Statements Exercises</h1>
+    
+    <div class="category">
+        <h2>Category 1: if...else Statements</h2>
+        <p>Open the browser console (F12) to see the results of these exercises.</p>
+        <button onclick="runCategory1()">Run Category 1 Examples</button>
+    </div>
+    
+    <div class="category">
+        <h2>Category 2: if...else if...else Statements</h2>
+        <p>Open the browser console (F12) to see the results of these exercises.</p>
+        <button onclick="runCategory2()">Run Category 2 Examples</button>
+    </div>
+    
+    <div class="category">
+        <h2>Category 3: Comparison Operators (==, ===)</h2>
+        <p>Open the browser console (F12) to see the results of these exercises.</p>
+        <button onclick="runCategory3()">Run Category 3 Examples</button>
+    </div>
+    
+    <div class="category">
+        <h2>Category 4: Logical Operators (&&, ||, !)</h2>
+        <p>Open the browser console (F12) to see the results of these exercises.</p>
+        <button onclick="runCategory4()">Run Category 4 Examples</button>
+    </div>
+    
+    <div class="category">
+        <h2>Category 5: Ternary Operator</h2>
+        <p>Open the browser console (F12) to see the results of these exercises.</p>
+        <button onclick="runCategory5()">Run Category 5 Examples</button>
+    </div>
+    
+    <div class="category">
+        <h2>Category 6: prompt(), confirm(), alert()</h2>
+        <div class="exercise">
+            <h3>Exercise 1: Check if a number is positive or negative</h3>
+            <button onclick="checkNumberSign()">Run Exercise</button>
+        </div>
+        
+        <div class="exercise">
+            <h3>Exercise 2: Confirm before deleting a record</h3>
+            <button onclick="deleteRecord()">Run Exercise</button>
+        </div>
+        
+        <div class="exercise">
+            <h3>Exercise 3: Welcome message based on user name</h3>
+            <button onclick="welcomeUser()">Run Exercise</button>
+        </div>
+        
+        <div class="exercise">
+            <h3>Exercise 4: Check voting eligibility</h3>
+            <button onclick="checkVotingEligibility()">Run Exercise</button>
+        </div>
+        
+        <div class="exercise">
+            <h3>Exercise 5: Simple login simulation</h3>
+            <button onclick="loginSimulation()">Run Exercise</button>
+        </div>
+    </div>
+    
+    <!-- Load the JavaScript files -->
+    <script src="category1.js"></script>
+    <script src="category2.js"></script>
+    <script src="category3.js"></script>
+    <script src="category4.js"></script>
+    <script src="category5.js"></script>
+    <script src="category6.js"></script>
+    
+    <script>
+        // Functions to run the examples from categories 1-5
+        function runCategory1() {
+            console.clear();
+            console.log("RUNNING CATEGORY 1 EXAMPLES:");
+            console.log("============================");
+            
+            // Exercise 1
+            console.log("Exercise 1: Check if a number is even or odd");
+            checkEvenOrOdd(4);
+            checkEvenOrOdd(7);
+            console.log("\n");
+            
+            // Exercise 2
+            console.log("Exercise 2: Check voting eligibility");
+            checkVotingEligibility(20);
+            checkVotingEligibility(16);
+            console.log("\n");
+            
+            // Exercise 3
+            console.log("Exercise 3: Check if a number is positive, negative, or zero");
+            checkNumberSign(10);
+            checkNumberSign(-5);
+            checkNumberSign(0);
+            console.log("\n");
+            
+            // Exercise 4
+            console.log("Exercise 4: Check if a character is a vowel or consonant");
+            checkVowelOrConsonant('A');
+            checkVowelOrConsonant('b');
+            checkVowelOrConsonant('3');
+            console.log("\n");
+            
+            // Exercise 5
+            console.log("Exercise 5: Compare two numbers and find the greater one");
+            findGreaterNumber(15, 10);
+            findGreaterNumber(8, 20);
+            findGreaterNumber(5, 5);
+        }
+        
+        function runCategory2() {
+            console.clear();
+            console.log("RUNNING CATEGORY 2 EXAMPLES:");
+            console.log("============================");
+            
+            // Exercise 1
+            console.log("Exercise 1: Grade students based on marks");
+            gradeStudent(95);
+            gradeStudent(82);
+            gradeStudent(75);
+            gradeStudent(65);
+            gradeStudent(45);
+            console.log("\n");
+            
+            // Exercise 2
+            console.log("Exercise 2: Determine the day of the week");
+            getDayOfWeek(1);
+            getDayOfWeek(5);
+            getDayOfWeek(7);
+            getDayOfWeek(10);
+            console.log("\n");
+            
+            // Exercise 3
+            console.log("Exercise 3: Check if a year is a leap year");
+            checkLeapYear(2020);
+            checkLeapYear(2021);
+            checkLeapYear(2000);
+            checkLeapYear(1900);
+            console.log("\n");
+            
+            // Exercise 4
+            console.log("Exercise 4: Weather suggestions based on temperature");
+            checkWeather(5);
+            checkWeather(18);
+            checkWeather(30);
+        }
+        
+        function runCategory3() {
+            console.clear();
+            console.log("RUNNING CATEGORY 3 EXAMPLES:");
+            console.log("============================");
+            
+            // Exercise 1
+            console.log("Exercise 1: Compare values using == and ===");
+            compareOperators(5, 5);
+            compareOperators(5, "5");
+            compareOperators(0, false);
+            compareOperators(1, true);
+            compareOperators("hello", "hello");
+            console.log("\n");
+            
+            // Exercise 2
+            console.log("Exercise 2: Compare string '5' and number 5");
+            compareStringAndNumber();
+            console.log("\n");
+            
+            // Exercise 3
+            console.log("Exercise 3: Login check with strict equality");
+            checkLogin("user123", "pass456");
+            checkLogin("User123", "pass456");
+            checkLogin("user123", "wrongpass");
+        }
+        
+        function runCategory4() {
+            console.clear();
+            console.log("RUNNING CATEGORY 4 EXAMPLES:");
+            console.log("============================");
+            
+            // Exercise 1
+            console.log("Exercise 1: Check if a person can drive");
+            checkDrivingEligibility(20, true);
+            checkDrivingEligibility(20, false);
+            checkDrivingEligibility(16, false);
+            console.log("\n");
+            
+            // Exercise 2
+            console.log("Exercise 2: Check if a number is divisible by 2 OR 3");
+            checkDivisibility(6);
+            checkDivisibility(4);
+            checkDivisibility(9);
+            checkDivisibility(7);
+            console.log("\n");
+            
+            // Exercise 3
+            console.log("Exercise 3: Toggle boolean values with the NOT operator");
+            toggleBoolean(true);
+            toggleBoolean(false);
+            console.log("\n");
+            
+            // Exercise 4
+            console.log("Exercise 4: Check discount eligibility");
+            checkDiscountEligibility(20, true);
+            checkDiscountEligibility(70, false);
+            checkDiscountEligibility(70, true);
+            checkDiscountEligibility(30, false);
+        }
+        
+        function runCategory5() {
+            console.clear();
+            console.log("RUNNING CATEGORY 5 EXAMPLES:");
+            console.log("============================");
+            
+            // Exercise 1
+            console.log("Exercise 1: Check if a number is even or odd using ternary operator");
+            checkEvenOddTernary(4);
+            checkEvenOddTernary(7);
+            console.log("\n");
+            
+            // Exercise 2
+            console.log("Exercise 2: Check pass or fail using ternary operator");
+            checkPassOrFail(75);
+            checkPassOrFail(45);
+            checkPassOrFail(95);
+            console.log("\n");
+            
+            // Exercise 3
+            console.log("Exercise 3: Check leap year using ternary operator");
+            checkLeapYearTernary(2020);
+            checkLeapYearTernary(2021);
+            checkLeapYearTernary(2000);
+            checkLeapYearTernary(1900);
+        }
+    </script>
+</body>
+</html>
